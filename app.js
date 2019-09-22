@@ -8,3 +8,6 @@ app.get('/', (req, res) => {
     let username = 'Admin'
     res.render('home', { username })
 })
+app.get('/login', (req, res) => {
+    res.render('login')
+})
