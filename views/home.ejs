@@ -12,8 +12,12 @@
     <h2>
         Hello EJS
     </h2>
-    <% if(username){%>
-    <b> <%=username%> </b>
+    <% 
+    let age = 10
+    if(username){%>
+    <b>Name: <%=username%> </b>
+    <br>
+    <i>Age: <%= age%></i>
     <% }%>
 </body>
 
