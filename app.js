@@ -3,4 +3,4 @@
 const express = require('express');
 const app = express();
 app.listen(3000, () => console.log('Server start!'))
-app.use('view engine', 'ejs')
+app.set('view engine', 'ejs')
