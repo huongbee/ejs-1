@@ -16,5 +16,6 @@ app.get('/login', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
-
+    const { username, password } = req.body
+    res.send({ username, password })
 })
