@@ -38,13 +38,18 @@
                         <tr>
                             <td><%=singer._id%></td>
                             <td>
-                                <a target="_blink" href="<%=profileLink%><%=singer.link%>"><%=singer.name%></a>
+                                <a target="_blink" href="<%=profileLink%><%=singer.link%>">
+                                    <%=singer.name%>
+                                </a>
                             </td>
                             <td>
                                 <img width="100px" src="<%=avatarLink%><%=singer.avatar%>">
                             </td>
                             <td>
                                 <button class="btn btn-danger">Delete</button>
+                                <br>
+                                <br>
+                                <button class="btn btn-warning">Update</button>
                             </td>
                         </tr>
                         <% })%>

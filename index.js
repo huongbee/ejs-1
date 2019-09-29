@@ -12,3 +12,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.get('/', (req, res) => {
     res.render('singer/index', { arraySinger, avatarLink, profileLink });
 })
+app.get('/add', (req, res) => {
+    res.render('singer/add');
+})
