@@ -19,7 +19,7 @@
         </div>
         <div class="row form-group  justify-content-center">
             <div class="col-6">
-                <form action="/add" method="POST">
+                <form action="/update/<%=singer._id%>" method="POST">
                     <div class="form-group">
                         <label for="">Name</label>
                         <input type="text" name="name" class="form-control" placeholder="Name" value="<%=singer.name%>">

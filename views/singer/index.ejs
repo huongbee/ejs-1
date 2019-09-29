@@ -46,10 +46,14 @@
                                 <img width="100px" src="<%=avatarLink%><%=singer.avatar%>">
                             </td>
                             <td>
-                                <button class="btn btn-danger">Delete</button>
+                                <button class="btn btn-danger">
+                                    <a href="/delete/<%=singer._id%>">Delete</a>
+                                </button>
                                 <br>
                                 <br>
-                                <button class="btn btn-warning">Update</button>
+                                <button class="btn btn-warning">
+                                    <a href="/update/<%=singer._id%>">Update</a>
+                                </button>
                             </td>
                         </tr>
                         <% })%>
