@@ -17,7 +17,23 @@ app.get('/add', (req, res) => {
 })
 app.post('/add', (req, res) => {
     const { name, link, avatar } = req.body;
-    const _id = Math.round(Math.random() * 1000);
+    const _id = Math.ceil(Math.random() * 1000);
+    const singer = new Singer(_id, name, link, avatar);
+    arraySinger.push(singer);
+    res.redirect('/')
+})
+
+app.get('/update/:id', (req, res) => {
+    const id = req.params.id;
+    const singer = arraySinger.find(s => s._id == id);
+    if (!singer) {
+        return res.send(404);
+    }
+    res.render('singer/update', { singer });
+})
+app.post('/add', (req, res) => {
+    const { name, link, avatar } = req.body;
+    const _id = Math.ceil(Math.random() * 1000);
     const singer = new Singer(_id, name, link, avatar);
     arraySinger.push(singer);
     res.redirect('/')
