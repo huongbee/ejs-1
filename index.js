@@ -15,3 +15,10 @@ app.get('/', (req, res) => {
 app.get('/add', (req, res) => {
     res.render('singer/add');
 })
+app.post('/add', (req, res) => {
+    const { name, link, avatar } = req.body;
+    const _id = Math.round(Math.random() * 1000);
+    const singer = new Singer(_id, name, link, avatar);
+    arraySinger.push(singer);
+    res.redirect('/')
+})
